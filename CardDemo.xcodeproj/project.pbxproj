@@ -13,6 +13,7 @@
 		D0AD65D91D6499A40018073B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AD65D71D6499A40018073B /* Main.storyboard */; };
 		D0AD65DB1D6499A40018073B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0AD65DA1D6499A40018073B /* Assets.xcassets */; };
 		D0AD65DE1D6499A40018073B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0AD65DC1D6499A40018073B /* LaunchScreen.storyboard */; };
+		D0AD65E71D6499DF0018073B /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = D0AD65E61D6499DF0018073B /* Card.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		D0AD65DA1D6499A40018073B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0AD65DD1D6499A40018073B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0AD65DF1D6499A40018073B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0AD65E51D6499DF0018073B /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		D0AD65E61D6499DF0018073B /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,8 @@
 			children = (
 				D0AD65D11D6499A40018073B /* AppDelegate.h */,
 				D0AD65D21D6499A40018073B /* AppDelegate.m */,
+				D0AD65E51D6499DF0018073B /* Card.h */,
+				D0AD65E61D6499DF0018073B /* Card.m */,
 				D0AD65D41D6499A40018073B /* ViewController.h */,
 				D0AD65D51D6499A40018073B /* ViewController.m */,
 				D0AD65D71D6499A40018073B /* Main.storyboard */,
@@ -152,6 +157,7 @@
 				D0AD65D61D6499A40018073B /* ViewController.m in Sources */,
 				D0AD65D31D6499A40018073B /* AppDelegate.m in Sources */,
 				D0AD65D01D6499A40018073B /* main.m in Sources */,
+				D0AD65E71D6499DF0018073B /* Card.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
