@@ -9,5 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface Card : NSObject
+@property (nonatomic,strong) NSString *contents;
+
+@property (nonatomic,assign) BOOL chosen;
+@property (nonatomic,assign) BOOL matched;
+
+
+-(int)match:(NSArray *)otherCards;
 
 @end
