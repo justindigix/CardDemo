@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,6 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flip: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDh-QO-rAy">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8a-Pe-hiN">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -24,34 +32,50 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="20" width="93" height="142"/>
-                                </variation>
                                 <connections>
                                     <action selector="touchCardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4AJ-kW-a6T"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flip: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDh-QO-rAy">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="26" y="188" width="289" height="31"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eDh-QO-rAy" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="8" id="Ea3-V4-gFF">
+                                <variation key="heightClass=regular" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="L8a-Pe-hiN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerXWithinMargins" identifier="CenterX.Card" id="JYC-it-6OK"/>
+                            <constraint firstItem="eDh-QO-rAy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lpk-ML-tAQ"/>
+                            <constraint firstItem="eDh-QO-rAy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L8a-Pe-hiN" secondAttribute="bottom" constant="8" symbolic="YES" id="SgM-T8-8i4">
+                                <variation key="heightClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="L8a-Pe-hiN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Zm3-mb-2fW"/>
+                            <constraint firstItem="eDh-QO-rAy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="lJQ-yt-41L"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="L8a-Pe-hiN"/>
                                 <exclude reference="eDh-QO-rAy"/>
+                                <exclude reference="L8a-Pe-hiN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="JYC-it-6OK"/>
+                                <exclude reference="Zm3-mb-2fW"/>
+                                <exclude reference="Ea3-V4-gFF"/>
+                                <exclude reference="Lpk-ML-tAQ"/>
+                                <exclude reference="SgM-T8-8i4"/>
+                                <exclude reference="lJQ-yt-41L"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
-                                <include reference="L8a-Pe-hiN"/>
                                 <include reference="eDh-QO-rAy"/>
+                                <include reference="L8a-Pe-hiN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="JYC-it-6OK"/>
+                                <include reference="Zm3-mb-2fW"/>
+                                <include reference="Ea3-V4-gFF"/>
+                                <exclude reference="Lpk-ML-tAQ"/>
+                                <include reference="SgM-T8-8i4"/>
+                                <include reference="lJQ-yt-41L"/>
                             </mask>
                         </variation>
                     </view>
