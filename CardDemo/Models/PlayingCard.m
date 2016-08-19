@@ -40,6 +40,33 @@
     return  [[PlayingCard rankStrings][self.rank] stringByAppendingString:self.suit];
 }
 
+
+- (int)match:(NSArray *)otherCards{
+    int score = 0;
+    if ([otherCards count]==1) {
+        PlayingCard *otherCard = [otherCards firstObject];
+        // PlayingCard *otherCard = [otherCards objectAtIndex:0]; //this could cause crash!
+        if ([self.suit isEqualToString:otherCard.suit]) {
+            score = 1;
+        }else if(self.rank == otherCard.rank){
+            score = 4;
+        }
+    }else{
+        int tempScore = 0;
+        for (PlayingCard *otherCard in otherCards) {
+            if ([self.suit isEqualToString:otherCard.suit]) {
+                tempScore = 1;
+            }else if(self.rank == otherCard.rank){
+                tempScore = 4;
+            }
+            score += tempScore;
+        }
+
+    }
+    
+    return score;
+}
+
 #pragma mark - Override the setter getter
 -(void)setSuit:(NSString *)aSuit{
     
